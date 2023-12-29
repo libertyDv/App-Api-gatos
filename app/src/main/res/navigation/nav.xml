@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/fragmentRaza">
+
+    <fragment
+        android:id="@+id/fragmentRaza"
+        android:name="com.example.gatapi.ui.fragments.FragmentRaza"
+        android:label="Razas"
+        tools:layout="@layout/fragment_raza">
+        <action
+            android:id="@+id/action_fragmentRaza_to_fragmentDetalles"
+            app:destination="@id/fragmentDetalles" />
+        <action
+            android:id="@+id/action_fragmentRaza_to_fragmentVotaciones"
+            app:destination="@id/fragmentVotaciones" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDetalles"
+        android:name="com.example.gatapi.ui.fragments.FragmentDetalles"
+        android:label="Detalles"
+        tools:layout="@layout/fragment_detalles" />
+    <fragment
+        android:id="@+id/fragmentVotaciones"
+        android:name="com.example.gatapi.ui.fragments.FragmentVotaciones"
+        android:label="Votaciones"
+        tools:layout="@layout/fragment_votaciones" />
+</navigation>
